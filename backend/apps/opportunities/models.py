@@ -123,7 +123,8 @@ class Opportunity(models.Model):
         """Determines if the publication date is strictly within the 7-day window."""
         if not self.published_at:
             return False
-        cutoff = timezone.now() - timedelta(days=settings.FRESHNESS_WINDOW_DAYS)
+        # Allow 60-second clock skew buffer for exact 7-day boundary evaluations
+        cutoff = timezone.now() - timedelta(days=settings.FRESHNESS_WINDOW_DAYS, seconds=60)
         return self.published_at >= cutoff
 
     @property

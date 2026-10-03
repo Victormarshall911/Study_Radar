@@ -68,7 +68,7 @@ class TestMandatoryFreshnessRequirements:
 
     def test_case_4_posted_exactly_7_days_ago(self):
         """Case 4: posted exactly 7 days ago -> handle boundary correctly"""
-        dt_7d_ago = self.now - timedelta(days=7)
+        dt_7d_ago = datetime.now(timezone.utc) - timedelta(days=7)
         opp = Opportunity(
             title="Boundary Study",
             published_at=dt_7d_ago,
