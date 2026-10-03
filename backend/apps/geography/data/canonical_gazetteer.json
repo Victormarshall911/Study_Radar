@@ -1,0 +1,89 @@
+{
+  "countries": [
+    {
+      "code": "US",
+      "name": "United States",
+      "aliases": ["United States", "USA", "U.S.A.", "U.S.", "US residents", "American", "United States of America", "across the United States"]
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "aliases": ["Canada", "Canadian", "Canada-wide", "across Canada", "Canadian residents"]
+    }
+  ],
+  "us_states": [
+    {"name": "Alabama", "code": "AL", "cities": ["Birmingham", "Montgomery", "Mobile", "Huntsville"]},
+    {"name": "Alaska", "code": "AK", "cities": ["Anchorage", "Fairbanks", "Juneau"]},
+    {"name": "Arizona", "code": "AZ", "cities": ["Phoenix", "Tucson", "Mesa", "Chandler", "Scottsdale", "Tempe"], "metro": ["Phoenix metro", "Phoenix metropolitan area"]},
+    {"name": "Arkansas", "code": "AR", "cities": ["Little Rock", "Fayetteville", "Fort Smith"]},
+    {"name": "California", "code": "CA", "cities": ["Los Angeles", "San Francisco", "San Diego", "San Jose", "Sacramento", "Oakland", "Fresno"], "counties": ["Los Angeles County", "Orange County", "San Diego County"], "regions": ["Southern California", "Northern California", "Bay Area", "SoCal", "NorCal"]},
+    {"name": "Colorado", "code": "CO", "cities": ["Denver", "Colorado Springs", "Aurora", "Boulder"]},
+    {"name": "Connecticut", "code": "CT", "cities": ["Bridgeport", "New Haven", "Hartford", "Stamford"]},
+    {"name": "Delaware", "code": "DE", "cities": ["Wilmington", "Dover", "Newark"]},
+    {"name": "Florida", "code": "FL", "cities": ["Miami", "Orlando", "Tampa", "Jacksonville", "St. Petersburg", "Fort Lauderdale"], "metro": ["South Florida", "Tampa Bay"]},
+    {"name": "Georgia", "code": "GA", "cities": ["Atlanta", "Augusta", "Columbus", "Savannah"], "metro": ["Metro Atlanta", "Greater Atlanta"]},
+    {"name": "Hawaii", "code": "HI", "cities": ["Honolulu", "Hilo", "Kailua"]},
+    {"name": "Idaho", "code": "ID", "cities": ["Boise", "Meridian", "Nampa"]},
+    {"name": "Illinois", "code": "IL", "cities": ["Chicago", "Aurora", "Naperville", "Rockford", "Springfield"], "metro": ["Chicagoland", "Greater Chicago"]},
+    {"name": "Indiana", "code": "IN", "cities": ["Indianapolis", "Fort Wayne", "Evansville", "South Bend"]},
+    {"name": "Iowa", "code": "IA", "cities": ["Des Moines", "Cedar Rapids", "Davenport"]},
+    {"name": "Kansas", "code": "KS", "cities": ["Wichita", "Overland Park", "Kansas City", "Topeka"]},
+    {"name": "Kentucky", "code": "KY", "cities": ["Louisville", "Lexington", "Bowling Green"]},
+    {"name": "Louisiana", "code": "LA", "cities": ["New Orleans", "Baton Rouge", "Shreveport", "Lafayette"]},
+    {"name": "Maine", "code": "ME", "cities": ["Portland", "Lewiston", "Bangor"]},
+    {"name": "Maryland", "code": "MD", "cities": ["Baltimore", "Frederick", "Rockville", "Bethesda"]},
+    {"name": "Massachusetts", "code": "MA", "cities": ["Boston", "Worcester", "Springfield", "Cambridge"], "metro": ["Greater Boston"]},
+    {"name": "Michigan", "code": "MI", "cities": ["Detroit", "Grand Rapids", "Warren", "Ann Arbor", "Lansing"]},
+    {"name": "Minnesota", "code": "MN", "cities": ["Minneapolis", "St. Paul", "Rochester", "Duluth"], "metro": ["Twin Cities"]},
+    {"name": "Mississippi", "code": "MS", "cities": ["Jackson", "Gulfport", "Southaven"]},
+    {"name": "Missouri", "code": "MO", "cities": ["Kansas City", "St. Louis", "Springfield", "Columbia"]},
+    {"name": "Montana", "code": "MT", "cities": ["Billings", "Missoula", "Great Falls", "Bozeman"]},
+    {"name": "Nebraska", "code": "NE", "cities": ["Omaha", "Lincoln", "Bellevue"]},
+    {"name": "Nevada", "code": "NV", "cities": ["Las Vegas", "Henderson", "Reno", "North Las Vegas"]},
+    {"name": "New Hampshire", "code": "NH", "cities": ["Manchester", "Nashua", "Concord"]},
+    {"name": "New Jersey", "code": "NJ", "cities": ["Newark", "Jersey City", "Paterson", "Elizabeth"]},
+    {"name": "New Mexico", "code": "NM", "cities": ["Albuquerque", "Las Cruces", "Rio Rancho", "Santa Fe"]},
+    {"name": "New York", "code": "NY", "cities": ["New York", "New York City", "Buffalo", "Rochester", "Yonkers", "Syracuse", "Albany"], "metro": ["NYC", "Greater New York", "Tri-State"]},
+    {"name": "North Carolina", "code": "NC", "cities": ["Charlotte", "Raleigh", "Greensboro", "Durham", "Winston-Salem"], "metro": ["Research Triangle"]},
+    {"name": "North Dakota", "code": "ND", "cities": ["Fargo", "Bismarck", "Grand Forks"]},
+    {"name": "Ohio", "code": "OH", "cities": ["Columbus", "Cleveland", "Cincinnati", "Toledo", "Akron", "Dayton"]},
+    {"name": "Oklahoma", "code": "OK", "cities": ["Oklahoma City", "Tulsa", "Norman", "Broken Arrow"]},
+    {"name": "Oregon", "code": "OR", "cities": ["Portland", "Salem", "Eugene", "Gresham", "Hillsboro"]},
+    {"name": "Pennsylvania", "code": "PA", "cities": ["Philadelphia", "Pittsburgh", "Allentown", "Reading", "Erie"]},
+    {"name": "Rhode Island", "code": "RI", "cities": ["Providence", "Warwick", "Cranston"]},
+    {"name": "South Carolina", "code": "SC", "cities": ["Charleston", "Columbia", "North Charleston", "Greenville"]},
+    {"name": "South Dakota", "code": "SD", "cities": ["Sioux Falls", "Rapid City", "Aberdeen"]},
+    {"name": "Tennessee", "code": "TN", "cities": ["Nashville", "Memphis", "Knoxville", "Chattanooga", "Clarksville"]},
+    {"name": "Texas", "code": "TX", "cities": ["Houston", "San Antonio", "Dallas", "Austin", "Fort Worth", "El Paso", "Arlington"], "metro": ["DFW", "Dallas-Fort Worth", "Greater Houston"]},
+    {"name": "Utah", "code": "UT", "cities": ["Salt Lake City", "West Valley City", "Provo", "West Jordan"]},
+    {"name": "Vermont", "code": "VT", "cities": ["Burlington", "South Burlington", "Rutland"]},
+    {"name": "Virginia", "code": "VA", "cities": ["Virginia Beach", "Norfolk", "Chesapeake", "Richmond", "Arlington", "Alexandria"]},
+    {"name": "Washington", "code": "WA", "cities": ["Seattle", "Spokane", "Tacoma", "Vancouver", "Bellevue"]},
+    {"name": "West Virginia", "code": "WV", "cities": ["Charleston", "Huntington", "Morgantown"]},
+    {"name": "Wisconsin", "code": "WI", "cities": ["Milwaukee", "Madison", "Green Bay", "Kenosha"]},
+    {"name": "Wyoming", "code": "WY", "cities": ["Cheyenne", "Casper", "Laramie"]},
+    {"name": "District of Columbia", "code": "DC", "cities": ["Washington", "Washington, DC", "Washington DC"]}
+  ],
+  "ca_provinces": [
+    {"name": "Alberta", "code": "AB", "cities": ["Calgary", "Edmonton", "Red Deer", "Lethbridge"]},
+    {"name": "British Columbia", "code": "BC", "cities": ["Vancouver", "Victoria", "Surrey", "Burnaby", "Richmond", "Kelowna"], "metro": ["Metro Vancouver", "Greater Vancouver"]},
+    {"name": "Manitoba", "code": "MB", "cities": ["Winnipeg", "Brandon", "Steinbach"]},
+    {"name": "New Brunswick", "code": "NB", "cities": ["Moncton", "Saint John", "Fredericton"]},
+    {"name": "Newfoundland and Labrador", "code": "NL", "cities": ["St. John's", "Mount Pearl", "Corner Brook"]},
+    {"name": "Nova Scotia", "code": "NS", "cities": ["Halifax", "Dartmouth", "Sydney"]},
+    {"name": "Ontario", "code": "ON", "cities": ["Toronto", "Ottawa", "Mississauga", "Brampton", "Hamilton", "London", "Markham", "Vaughan", "Kitchener", "Windsor"], "metro": ["Greater Toronto Area", "GTA"]},
+    {"name": "Prince Edward Island", "code": "PE", "cities": ["Charlottetown", "Summerside"]},
+    {"name": "Quebec", "code": "QC", "cities": ["Montreal", "Quebec City", "Laval", "Gatineau", "Longueuil", "Sherbrooke"], "metro": ["Greater Montreal"]},
+    {"name": "Saskatchewan", "code": "SK", "cities": ["Saskatoon", "Regina", "Prince Albert"]}
+  ],
+  "ca_territories": [
+    {"name": "Northwest Territories", "code": "NT", "cities": ["Yellowknife", "Inuvik", "Hay River"]},
+    {"name": "Nunavut", "code": "NU", "cities": ["Iqaluit", "Rankin Inlet"]},
+    {"name": "Yukon", "code": "YT", "cities": ["Whitehorse", "Dawson City"]}
+  ],
+  "excluded_foreign_countries": [
+    "United Kingdom", "UK", "Great Britain", "England", "Scotland", "Wales", "Northern Ireland",
+    "Australia", "Germany", "France", "Japan", "India", "Brazil", "Mexico", "New Zealand", "South Africa",
+    "Ireland", "Spain", "Italy", "Netherlands", "Sweden", "Switzerland", "China", "Nigeria"
+  ]
+}
