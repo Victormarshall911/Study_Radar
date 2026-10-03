@@ -272,18 +272,37 @@ class GeographyResolver:
     def _split_participant_and_researcher_contexts(self, text: str) -> tuple[str, str]:
         """
         Splits text into participant-eligibility focused context vs researcher institution context.
+        Explicitly removes researcher institution names from participant context so universities
+        (e.g., University of Michigan, University of Toronto) are not mistaken for participant location requirements.
         """
-        # Look for explicit eligibility sections
+        researcher_patterns = [
+            re.compile(r'\b(?:conducted\s+by\s+researchers\s+at|conducted\s+by|hosted\s+by|researchers\s+at)\s+[^.,;\n]+', re.IGNORECASE),
+            re.compile(r'\b(?:department\s+of\s+[^.,;\n]+at\s+[^.,;\n]+)', re.IGNORECASE),
+            re.compile(r'\b(?:university\s+of\s+[A-Za-z]+|[A-Za-z]+\s+state\s+university|[A-Za-z]+\s+university)', re.IGNORECASE),
+        ]
+
+        researcher_cues = []
+        cleaned_participant_text = text
+
+        # Check for explicit eligibility section first
         eligibility_split = re.split(r'(?:eligibility|requirements|who\s+can\s+participate|looking\s+for|criteria)\s*:\s*', text, flags=re.IGNORECASE)
         if len(eligibility_split) > 1:
             participant_context = " ".join(eligibility_split[1:])
             researcher_context = eligibility_split[0]
+            # Strip institution phrases from participant context if any leaked in
+            for pat in researcher_patterns:
+                participant_context = pat.sub(' ', participant_context)
             return participant_context, researcher_context
 
-        # Look for researcher indicators (e.g. "Department of Psychology at University of Michigan")
-        researcher_match = re.search(r'(?:university\s+of\s+[A-Za-z]+|[A-Za-z]+\s+state\s+university|hosted\s+by\s+[A-Za-z]+)', text, flags=re.IGNORECASE)
-        researcher_text = researcher_match.group(0) if researcher_match else ''
-        return text, researcher_text
+        # Strip all researcher phrases from text to form participant context
+        for pat in researcher_patterns:
+            matches = pat.findall(cleaned_participant_text)
+            if matches:
+                researcher_cues.extend(matches)
+                cleaned_participant_text = pat.sub(' ', cleaned_participant_text)
+
+        researcher_context = " ".join(researcher_cues)
+        return cleaned_participant_text, researcher_context
 
     def _is_strictly_foreign(self, text: str) -> bool:
         for country in self.excluded_countries:
