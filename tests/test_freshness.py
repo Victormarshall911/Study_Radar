@@ -12,7 +12,7 @@ class TestMandatoryFreshnessRequirements:
     @pytest.fixture(autouse=True)
     def setup(self):
         self.extractor = DateExtractionService()
-        self.now = datetime(2026, 10, 3, 12, 0, 0, tzinfo=timezone.utc)
+        self.now = datetime.now(timezone.utc)
 
     def test_case_1_posted_1_hour_ago(self):
         """Case 1: posted 1 hour ago -> include"""
